@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('')
@@ -51,8 +52,8 @@ const LoginPage = () => {
           max-width: 1080px;
           max-height: 1920px;
           aspect-ratio: 9 / 16;
-          background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
-          box-shadow: 0 0 40px rgba(0,0,0,0.2);
+          background: linear-gradient(180deg, #AD7FF5 0%, #6253D3 100%);
+          box-shadow: 0 0 40px #F5F5F5;
           overflow: hidden;
           /* 내부 컨텐츠 스케일 조정용 */
           display: flex;
@@ -137,10 +138,10 @@ const LoginPage = () => {
           background-repeat: no-repeat;
         }
         .input-group .mail {
-          background-image: url('/img/email-icon.png');
+          background-image: url('/img/icon/email-icon.png');
         }
         .input-group .w {
-          background-image: url('/img/pw-icon.png');
+          background-image: url('/img/icon/pw-icon.png');
           width: 47px;
           height: 56px;
         }
@@ -156,7 +157,7 @@ const LoginPage = () => {
         .login-btn {
           width: 834px;
           height: 139px;
-          background: #ad7ff5;
+          background: #AD7FF5;
           color: #fff;
           border: none;
           border-radius: 100px;
@@ -167,7 +168,7 @@ const LoginPage = () => {
           transition: background 0.2s;
         }
         .login-btn:hover {
-          background: #6253d3;
+          background: #6253D3;
         }
         .bottom-links {
           position: absolute;
@@ -228,7 +229,7 @@ const LoginPage = () => {
             <span>|</span>
             <a href="#">비밀번호 찾기</a>
             <span>|</span>
-            <a href="#">회원가입</a>
+            <Link to="/signup">회원가입</Link>
           </div>
         </div>
       </div>
