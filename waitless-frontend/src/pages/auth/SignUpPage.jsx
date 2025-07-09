@@ -36,41 +36,7 @@ const SignUpPage = () => {
   return (
     <div className="aspect-outer">
       <style>{`
-        html, body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          background: #fff;
-        }
-        .aspect-outer {
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #fff;
-          overflow: hidden;
-        }
-        .aspect-inner {
-          position: relative;
-          width: 100vw;
-          height: calc(100vw * 16 / 9);
-          max-width: 1080px;
-          max-height: 1920px;
-          aspect-ratio: 9 / 16;
-          background: #fff;
-          box-shadow: 0 0 40px #F5F5F5;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          transform-origin: top left;
-        }
-        @media (min-aspect-ratio: 9/16) {
-          .aspect-inner {
-            height: 100vh;
-            width: calc(100vh * 9 / 16);
-          }
-        }
+
         .inner-content {
           width: 1080px;
           height: 1920px;

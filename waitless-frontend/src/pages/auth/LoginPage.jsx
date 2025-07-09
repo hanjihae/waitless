@@ -28,44 +28,9 @@ const LoginPage = () => {
   return (
     <div className="aspect-outer">
       <style>{`
-        html, body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          background: #222;
-        }
-
-        .aspect-outer {
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #F5F5F5;
-          overflow: hidden;
-        }
-
         .aspect-inner {
-          position: relative;
-          width: 100vw;
-          height: calc(100vw * 16 / 9);
-          max-width: 1080px;
-          max-height: 1920px;
-          aspect-ratio: 9 / 16;
-          background: linear-gradient(180deg, #AD7FF5 0%, #6253D3 100%);
-          box-shadow: 0 0 40px #F5F5F5;
-          overflow: hidden;
-          /* 내부 컨텐츠 스케일 조정용 */
-          display: flex;
-          flex-direction: column;
-          transform-origin: top left;
-        }
-
-        @media (min-aspect-ratio: 9/16) {
-          .aspect-inner {
-            height: 100vh;
-            width: calc(100vh * 9 / 16);
-          }
+          background: linear-gradient(180deg, #AD7FF5 0%, #6253D3 100%) !important;
+          background-size: cover !important;
         }
 
         /* 내부 컨텐츠를 1080x1920 기준으로 스케일 */
@@ -194,7 +159,10 @@ const LoginPage = () => {
         }
       `}</style>
       <div className="aspect-inner">
-        <div className="inner-content" style={{ transform: `scale(${scale})` }}>
+        <div
+          className="inner-content"
+          style={{ transform: `scale(${scale})`, transformOrigin: 'top left' }}
+        >
           <div className="logo-area">
             <img src="/img/waitless-logo-white.png" alt="로고" className="logo-img" />
           </div>
