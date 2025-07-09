@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MyPage = () => {
   const [scale, setScale] = useState(1);
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleResize() {
@@ -279,7 +281,7 @@ const MyPage = () => {
                 <span>즐겨찾기</span>
                 <span className="arrow"></span>
               </li>
-              <li>
+              <li onClick={() => navigate("/mypage/edit-myinfo")} style={{ cursor: "pointer" }}>
                 <span>내 정보 수정</span>
                 <span className="arrow"></span>
               </li>
