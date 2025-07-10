@@ -1,51 +1,27 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
+import MobileLayout from "../../components/MobileLayout";
 
 const SignUpPage = () => {
-  const [email, setEmail] = useState('')
-  const [pw, setPw] = useState('')
-  const [pwCheck, setPwCheck] = useState('')
-  const [name, setName] = useState('')
-  const [scale, setScale] = useState(1)
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("");
+  const [pw, setPw] = useState("");
+  const [pwCheck, setPwCheck] = useState("");
+  const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (pw !== pwCheck) {
-      alert('비밀번호가 일치하지 않습니다.')
-      return
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
     }
-    alert(`회원가입 시도: ${email}, ${name}`)
+    alert(`회원가입 시도: ${email}, ${name}`);
     // 실제 회원가입 로직 추가
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      const vw = window.innerWidth
-      const vh = window.innerHeight
-      const scaleW = vw / 1080
-      const scaleH = vh / 1920
-      const scale = Math.min(scaleW, scaleH, 1)
-      setScale(scale)
-    }
-    window.addEventListener('resize', handleResize)
-    handleResize()
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  };
 
   return (
-    <div className="aspect-outer">
+    <MobileLayout>
       <style>{`
-
-        .inner-content {
-          width: 1080px;
-          height: 1920px;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform-origin: top left;
-          background: #fff;
-        }
         .logo-area {
           position: absolute;
           left: 215px;
@@ -206,86 +182,87 @@ const SignUpPage = () => {
           color: #6253d3;
         }
       `}</style>
-      <div className="aspect-inner">
-        <div className="inner-content" style={{ transform: `scale(${scale})` }}>
-          <div className="logo-area">
-            <img src="/img/waitless-logo.png" alt="로고" className="logo-img" />
-          </div>
-          <div className="welcome-row">
-            <div className="welcome-text">회원가입</div>
-            <button
-              className="business-signup-btn"
-              onClick={() => navigate('/signup-business')}
-              type="button"
-            >
-              사업자이신가요?
-            </button>
-          </div>
-          <form className="signup-form" onSubmit={handleSignUp}>
-            <div className="input-group">
-              <span className="icon user"></span>
-              <input
-                type="text"
-                placeholder="이름"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                autoComplete="name"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon mail"></span>
-              <input
-                type="email"
-                placeholder="이메일"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                autoComplete="username"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon w"></span>
-              <input
-                type="password"
-                placeholder="비밀번호"
-                value={pw}
-                onChange={e => setPw(e.target.value)}
-                autoComplete="new-password"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon phone"></span>
-              <input
-                type="password"
-                placeholder="전화번호"
-                value={pwCheck}
-                onChange={e => setPwCheck(e.target.value)}
-                autoComplete="new-password"
-                required
-              />
-              <button type="button" className="input-right-btn">전송</button>
-            </div>
-            <div className="input-group">
-              <span className="icon certification"></span>
-              <input
-                type="password"
-                placeholder="인증번호 입력"
-                value={pwCheck}
-                onChange={e => setPwCheck(e.target.value)}
-                autoComplete="new-password"
-                required
-              />
-              <button type="button" className="input-right-btn">재전송</button>
-            </div>
-            <button type="submit" className="signup-btn">가입하기</button>
-          </form>
-        
-        </div>
+      <div className="logo-area">
+        <img src="/img/waitless-logo.png" alt="로고" className="logo-img" />
       </div>
-    </div>
-  )
-}
+      <div className="welcome-row">
+        <div className="welcome-text">회원가입</div>
+        <button
+          className="business-signup-btn"
+          onClick={() => navigate("/signup-business")}
+          type="button"
+        >
+          사업자이신가요?
+        </button>
+      </div>
+      <form className="signup-form" onSubmit={handleSignUp}>
+        <div className="input-group">
+          <span className="icon user"></span>
+          <input
+            type="text"
+            placeholder="이름"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon mail"></span>
+          <input
+            type="email"
+            placeholder="이메일"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="username"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon w"></span>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            autoComplete="new-password"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon phone"></span>
+          <input
+            type="password"
+            placeholder="전화번호"
+            value={pwCheck}
+            onChange={(e) => setPwCheck(e.target.value)}
+            autoComplete="new-password"
+            required
+          />
+          <button type="button" className="input-right-btn">
+            전송
+          </button>
+        </div>
+        <div className="input-group">
+          <span className="icon certification"></span>
+          <input
+            type="password"
+            placeholder="인증번호 입력"
+            value={pwCheck}
+            onChange={(e) => setPwCheck(e.target.value)}
+            autoComplete="new-password"
+            required
+          />
+          <button type="button" className="input-right-btn">
+            재전송
+          </button>
+        </div>
+        <button type="submit" className="signup-btn">
+          가입하기
+        </button>
+      </form>
+    </MobileLayout>
+  );
+};
 
-export default SignUpPage
+export default SignUpPage;

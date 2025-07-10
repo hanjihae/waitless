@@ -1,32 +1,18 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import MobileLayout from "../../components/MobileLayout";
 
 const BusinessSignUpPage = () => {
-  const [email, setEmail] = useState('');
-  const [pw, setPw] = useState('');
-  const [pwCheck, setPwCheck] = useState('');
-  const [name, setName] = useState('');
-  const [scale, setScale] = useState(1);
+  const [email, setEmail] = useState("");
+  const [pw, setPw] = useState("");
+  const [pwCheck, setPwCheck] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    function handleResize() {
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      const scaleW = vw / 1080;
-      const scaleH = vh / 1920;
-      const scale = Math.min(scaleW, scaleH, 1);
-      setScale(scale);
-    }
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const handleSignUp = (e) => {
     e.preventDefault();
     if (pw !== pwCheck) {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert("비밀번호가 일치하지 않습니다.");
       return;
     }
     alert(`사업자 회원가입 시도: ${email}, ${name}`);
@@ -34,18 +20,8 @@ const BusinessSignUpPage = () => {
   };
 
   return (
-    <div className="aspect-outer">
+    <MobileLayout>
       <style>{`
-      
-        .inner-content {
-          width: 1080px;
-          height: 1920px;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform-origin: top left;
-          background: #fff;
-        }
         .logo-area {
           position: absolute;
           left: 215px;
@@ -211,77 +187,69 @@ const BusinessSignUpPage = () => {
           color: #6253d3;
         }
       `}</style>
-      <div className="aspect-inner">
-        <div className="inner-content" style={{ transform: `scale(${scale})` }}>
-          <div className="logo-area">
-            <img src="/img/waitless-logo.png" alt="로고" className="logo-img" />
-          </div>
-          <div className="welcome-row">
-            <div className="welcome-text">사업자 회원가입</div>
-          </div>
-          <form className="signup-form" onSubmit={handleSignUp}>
-            <div className="input-group">
-              <span className="icon user"></span>
-              <input
-                type="text"
-                placeholder="이름"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon mail"></span>
-              <input
-                type="email"
-                placeholder="이메일"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon w"></span>
-              <input
-                type="password"
-                placeholder="비밀번호"
-                value={pw}
-                onChange={e => setPw(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon business-register"></span>
-              <input
-                type="text"
-                placeholder="사업자등록번호"
-                required
-              />
-              <button type="button" className="input-right-btn">인증</button>
-            </div>
-            <div className="input-group">
-              <span className="icon phone"></span>
-              <input
-                type="text"
-                placeholder="전화번호"
-                required
-              />
-              <button type="button" className="input-right-btn">전송</button>
-            </div>
-            <div className="input-group">
-              <span className="icon certification"></span>
-              <input
-                type="text"
-                placeholder="인증번호"
-                required
-              />
-              <button type="button" className="input-right-btn">재전송</button>
-            </div>
-            <button type="submit" className="signup-btn">가입하기</button>
-          </form>
-        </div>
+      <div className="logo-area">
+        <img src="/img/waitless-logo.png" alt="로고" className="logo-img" />
       </div>
-    </div>
+      <div className="welcome-row">
+        <div className="welcome-text">사업자 회원가입</div>
+      </div>
+      <form className="signup-form" onSubmit={handleSignUp}>
+        <div className="input-group">
+          <span className="icon user"></span>
+          <input
+            type="text"
+            placeholder="이름"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon mail"></span>
+          <input
+            type="email"
+            placeholder="이메일"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon w"></span>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon business-register"></span>
+          <input type="text" placeholder="사업자등록번호" required />
+          <button type="button" className="input-right-btn">
+            인증
+          </button>
+        </div>
+        <div className="input-group">
+          <span className="icon phone"></span>
+          <input type="text" placeholder="전화번호" required />
+          <button type="button" className="input-right-btn">
+            전송
+          </button>
+        </div>
+        <div className="input-group">
+          <span className="icon certification"></span>
+          <input type="text" placeholder="인증번호" required />
+          <button type="button" className="input-right-btn">
+            재전송
+          </button>
+        </div>
+        <button type="submit" className="signup-btn">
+          가입하기
+        </button>
+      </form>
+    </MobileLayout>
   );
 };
 

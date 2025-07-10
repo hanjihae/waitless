@@ -33,6 +33,16 @@ html, body {
   }
 }
 
+/* 내부 컨텐츠를 1080x1920 기준으로 스케일 */
+.inner-content {
+  width: 1080px;
+  height: 1920px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: top left;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

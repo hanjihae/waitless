@@ -1,46 +1,22 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import MobileLayout from "../../components/MobileLayout";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('')
-  const [pw, setPw] = useState('')
-  const [scale, setScale] = useState(1)
+  const [email, setEmail] = useState("");
+  const [pw, setPw] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    alert('로그인 시도: ' + email)
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      const vw = window.innerWidth
-      const vh = window.innerHeight
-      const scaleW = vw / 1080
-      const scaleH = vh / 1920
-      const scale = Math.min(scaleW, scaleH, 1)
-      setScale(scale)
-    }
-    window.addEventListener('resize', handleResize)
-    handleResize()
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    e.preventDefault();
+    alert("로그인 시도: " + email);
+  };
 
   return (
-    <div className="aspect-outer">
+    <MobileLayout>
       <style>{`
         .aspect-inner {
           background: linear-gradient(180deg, #AD7FF5 0%, #6253D3 100%) !important;
           background-size: cover !important;
-        }
-
-        /* 내부 컨텐츠를 1080x1920 기준으로 스케일 */
-        .inner-content {
-          width: 1080px;
-          height: 1920px;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform-origin: top left;
         }
 
         /* 내부 요소는 피그마 px값 그대로 (1080x1920 기준) */
@@ -158,51 +134,50 @@ const LoginPage = () => {
           color: #fff;
         }
       `}</style>
-      <div className="aspect-inner">
-        <div
-          className="inner-content"
-          style={{ transform: `scale(${scale})`, transformOrigin: 'top left' }}
-        >
-          <div className="logo-area">
-            <img src="/img/waitless-logo-white.png" alt="로고" className="logo-img" />
-          </div>
-          <div className="welcome-text">환영합니다!</div>
-          <form className="login-form" onSubmit={handleLogin}>
-            <div className="input-group">
-              <span className="icon mail"></span>
-              <input
-                type="email"
-                placeholder="이메일"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                autoComplete="username"
-                required
-              />
-            </div>
-            <div className="input-group">
-              <span className="icon w"></span>
-              <input
-                type="password"
-                placeholder="비밀번호"
-                value={pw}
-                onChange={e => setPw(e.target.value)}
-                autoComplete="current-password"
-                required
-              />
-            </div>
-            <button type="submit" className="login-btn">로그인</button>
-          </form>
-          <div className="bottom-links">
-            <a href="#">아이디 찾기</a>
-            <span>|</span>
-            <a href="#">비밀번호 찾기</a>
-            <span>|</span>
-            <Link to="/signup">회원가입</Link>
-          </div>
-        </div>
+      <div className="logo-area">
+        <img
+          src="/img/waitless-logo-white.png"
+          alt="로고"
+          className="logo-img"
+        />
       </div>
-    </div>
-  )
-}
+      <div className="welcome-text">환영합니다!</div>
+      <form className="login-form" onSubmit={handleLogin}>
+        <div className="input-group">
+          <span className="icon mail"></span>
+          <input
+            type="email"
+            placeholder="이메일"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="username"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <span className="icon w"></span>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            autoComplete="current-password"
+            required
+          />
+        </div>
+        <button type="submit" className="login-btn">
+          로그인
+        </button>
+      </form>
+      <div className="bottom-links">
+        <a href="#">아이디 찾기</a>
+        <span>|</span>
+        <a href="#">비밀번호 찾기</a>
+        <span>|</span>
+        <Link to="/signup">회원가입</Link>
+      </div>
+    </MobileLayout>
+  );
+};
 
-export default LoginPage
+export default LoginPage;
