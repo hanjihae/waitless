@@ -19,7 +19,6 @@ const LoginPage = () => {
           background-size: cover !important;
         }
 
-        /* 내부 요소는 피그마 px값 그대로 (1080x1920 기준) */
         .logo-area {
           position: absolute;
           left: 215px;
