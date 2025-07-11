@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import MobileLayout from "../../components/MobileLayout";
+import FooterLayout from "../../components/FooterLayout";
 import "../../styles/MyPageHeader.css";
-import "../../styles/MyPageFooter.css";
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -154,17 +154,23 @@ const MyPage = () => {
       <nav className="mypage-menu">
         <ul>
           <li
-            onClick={() => navigate("/mypage/reservation")}
+            onClick={() => navigate("/mypage/reservation-list")}
             style={{ cursor: "pointer" }}
           >
             <span>예약 내역</span>
             <span className="arrow"></span>
           </li>
-          <li>
+          <li
+            onClick={() => navigate("/mypage/waiting-list")}
+            style={{ cursor: "pointer" }}          
+          >
             <span>웨이팅 내역</span>
             <span className="arrow"></span>
           </li>
-          <li>
+          <li
+            onClick={() => navigate("/mypage/favorite-list")}
+            style={{ cursor: "pointer" }}          
+          >
             <span>즐겨찾기</span>
             <span className="arrow"></span>
           </li>
@@ -182,12 +188,7 @@ const MyPage = () => {
         </ul>
       </nav>
 
-      <footer className="mypage-footer">
-        <div className="footer-icon home"></div>
-        <div className="footer-icon search"></div>
-        <div className="footer-icon user"></div>
-        <div className="footer-icon etc"></div>
-      </footer>
+      <FooterLayout active="user" />
     </MobileLayout>
   );
 };

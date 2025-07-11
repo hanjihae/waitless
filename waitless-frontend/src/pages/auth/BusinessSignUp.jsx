@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MobileLayout from "../../components/MobileLayout";
 
-const BusinessSignUpPage = () => {
+const BusinessSignUp = () => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
   const [pwCheck, setPwCheck] = useState("");
@@ -253,4 +253,4 @@ const BusinessSignUpPage = () => {
   );
 };
 
-export default BusinessSignUpPage;
+export default BusinessSignUp;

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 import MobileLayout from "../../components/MobileLayout";
 
-const LoginPage = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
 
@@ -179,4 +179,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

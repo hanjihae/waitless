@@ -1,7 +1,7 @@
 import React from "react";
-import MobileLayout from "../../components/MobileLayout";
 import { useNavigate } from "react-router-dom";
-import "../../styles/MyPageFooter.css";
+import MobileLayout from "../../components/MobileLayout";
+import FooterLayout from "../../components/FooterLayout";
 
 const ReservationDetails = () => {
   const navigate = useNavigate();
@@ -223,14 +223,9 @@ const ReservationDetails = () => {
             <div className="details-list-btn-row">
               <button className="details-list-btn" onClick={() => navigate(-1)}>목록</button>
             </div>
+            <FooterLayout active="user" />
           </div>
         </div>
-        <footer className="mypage-footer">
-          <div className="footer-icon home"></div>
-          <div className="footer-icon search"></div>
-          <div className="footer-icon user"></div>
-          <div className="footer-icon etc"></div>
-        </footer>
       </div>
     </MobileLayout>
   );

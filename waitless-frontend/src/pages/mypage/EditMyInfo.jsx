@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import MobileLayout from "../../components/MobileLayout";
+import FooterLayout from "../../components/FooterLayout";
 import "../../styles/MyPageHeader.css";
-import "../../styles/MyPageFooter.css";
 
 const EditMyInfo = () => {
   const navigate = useNavigate();
@@ -143,13 +143,7 @@ const EditMyInfo = () => {
           저장
         </button>
       </form>
-
-      <footer className="mypage-footer">
-        <div className="footer-icon home"></div>
-        <div className="footer-icon search"></div>
-        <div className="footer-icon user"></div>
-        <div className="footer-icon etc"></div>
-      </footer>
+      <FooterLayout active="user" />
     </MobileLayout>
   );
 };
