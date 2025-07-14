@@ -20,7 +20,7 @@ html, body {
   max-width: 1080px;
   max-height: 1920px;
   aspect-ratio: 9 / 16;
-  box-shadow: 0 0 40px #b3b3b3;
+  box-shadow: 0 0 40px #F5F5F5;
   overflow: hidden;
   display: flex;
   flex-direction: column;

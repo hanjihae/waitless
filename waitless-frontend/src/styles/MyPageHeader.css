@@ -1,7 +1,7 @@
 .mypage-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     padding: 40px 48px 40px 32px;
     background: #fff;
     font-weight: 700;

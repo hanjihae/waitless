@@ -8,6 +8,7 @@ import ReservationList from './pages/mypage/ReservationList';
 import ReservationDetails from './pages/mypage/ReservationDetails';
 import WaitingList from './pages/mypage/WaitingList';
 import FavoriteList from './pages/mypage/FavoriteList';
+import Map from './pages/main/Map';
 import Search from './pages/main/Search';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/mypage/reservation-details" element= {<ReservationDetails />} />
         <Route path="/mypage/waiting-list" element={<WaitingList />} />
         <Route path="/mypage/favorite-list" element= {<FavoriteList />} />
+        <Route path="/main/" element= {<Map />} />
         <Route path="/main/search" element= {<Search />} />
       </Routes>
     </BrowserRouter>
