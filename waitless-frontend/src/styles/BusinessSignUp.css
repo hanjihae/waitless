@@ -1,0 +1,19 @@
+.business-logo-area {
+  width: 48vw;
+  max-width: 320px;
+  min-width: 160px;
+  margin: 5vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.business-logo-img {
+  width: 65%;
+  height: auto;
+}
+
+.input-group .icon.business-register {
+  background-image: url("/img/icon/image-icon.png");
+  width: 1.1rem;
+  height: 1.1rem;
+}

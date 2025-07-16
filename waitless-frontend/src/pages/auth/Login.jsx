@@ -12,12 +12,12 @@ const Login = () => {
   };
 
   return (
-    <div className="mobile-root">
-      <div className="logo-area">
+    <div className="mobile-root login">
+      <div className="login-logo-area">
         <img
           src="/img/waitless-logo-white.png"
           alt="로고"
-          className="logo-img"
+          className="login-logo-img"
         />
       </div>
       <div className="welcome-text">환영합니다!</div>
@@ -48,7 +48,7 @@ const Login = () => {
           로그인
         </button>
       </form>
-      <div className="bottom-links">
+      <div className="login-bottom-links">
         <a href="#">아이디 찾기</a>
         <span>|</span>
         <a href="#">비밀번호 찾기</a>
