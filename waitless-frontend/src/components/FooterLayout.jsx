@@ -9,7 +9,7 @@ const FooterLayout = ({ active = "user" }) => {
             left: 0;
             bottom: 0; 
             width: 100%;
-            height: 180px;
+            height: 12vh;
             background: #fff;
             display: flex;
             align-items: center;
@@ -18,8 +18,8 @@ const FooterLayout = ({ active = "user" }) => {
             z-index: 10;
         }
         .footer-icon {
-            width: 56px;
-            height: 56px;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
