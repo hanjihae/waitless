@@ -1,0 +1,79 @@
+.edit-form {
+  width: 100%;
+  max-width: 70vw;
+  margin: 0 auto;
+  height: calc(100vh - 13vh - 12vh);
+  padding-top: 25px;
+  overflow-y: auto;
+}
+.edit-label {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-left: 4px;
+  display: block;
+}
+.edit-input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 0 10px 0 10px;
+  height: 3.5rem;
+  border: 1px solid #b3b3b3;
+}
+.edit-input-group.slack .edit-input-icon {
+  width: 20px;
+  height: 20px;
+}
+.edit-input-group.phone .edit-input-icon {
+  width: 18px;
+  height: 18px;
+}
+.edit-input-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b3b3b3;
+  width: 100%;
+}
+.edit-save-btn {
+  float: right;
+  margin-top: 16px;
+  margin-right: 10px;
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 4.8rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.edit-save-btn:hover {
+  background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
+}
+
+@media (max-width: 600px) {
+  .edit-form {
+    max-width: 85vw;
+  }
+
+  .edit-input-group {
+    border: 1px solid #b3b3b3;
+  }
+}
