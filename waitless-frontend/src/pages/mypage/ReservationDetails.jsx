@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import MobileLayout from "../../components/MobileLayout";
 import FooterLayout from "../../components/FooterLayout";
+import "../../styles/ReservationDetails.css";
 
 const ReservationDetails = () => {
   const navigate = useNavigate();
@@ -22,145 +22,7 @@ const ReservationDetails = () => {
   };
 
   return (
-    <MobileLayout>
-      <style>{`
-        .reservation-details-outer {
-          background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%) !important;
-          width: 100%;
-          min-height: 100vh;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-        }
-        .reservation-details-container {
-          flex: 1 1 auto;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-        .reservation-details-card {
-          background: #fff;
-          border-radius: 100px 100px 0 0;
-          margin: 40px 0 0 0;
-          padding: 100px 110px 0 110px;
-          position: relative;
-          width: 100%;
-          min-height: 100vh;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-        }
-        .reservation-logo {
-          width: 400px;
-          display: block;
-          margin: 0 auto 0 auto;
-          padding-top: 40px;
-        }
-        .details-title-row {
-          display: flex;
-          align-items: center;
-          font-size: 55px;
-          font-weight: 800;
-          margin-bottom: 50px;
-        }
-        .details-title-row .arrow {
-          background-image: url('/img/icon/next-arrow-icon.png');
-          width: 30px;
-          height: 30px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          margin-left: 24px;
-        }
-        .details-row {
-          display: flex;
-          align-items: center;
-        }
-        .details-label {
-          font-size: 45px;
-          font-weight: 700;
-          width: 160px;
-          color: #111;
-        }
-        .details-value {
-          font-size: 40px;
-          color: #888;
-          margin-left: 30px;
-        }
-        .details-section-title {
-          font-size: 45px;
-          font-weight: 700;
-          margin: 40px 0 25px 0;
-          color: #111;
-        }
-        .menu-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 40px;
-          color: #888;
-          margin-bottom: 10px;
-        }
-        .menu-item .price {
-          color: #888;
-        }
-        .discount-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 40px;
-          color: #888;
-          margin-bottom: 10px;
-        }
-        .discount-item .price {
-          color: #888;
-        }
-        .discount-item .point {
-          color: #888;
-        }
-        .details-total-row {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 40px;
-          color: #222;
-          margin: 45px 0 80px 0;
-        }
-        .details-total-label {
-          font-size: 45px;
-          font-weight: 800;
-          margin-right: 32px;
-        }
-        .details-total-value {
-          font-size: 50px;
-          font-weight: 800;
-          color: #6253D3;
-        }
-        .details-list-btn-row {
-          display: flex;
-          justify-content: flex-end;
-          margin-bottom: 100%;
-        }
-        .details-list-btn {
-          background: #fff;
-          border: 2px solid #b3b3b3;
-          border-radius: 20px;
-          font-size: 40px;
-          font-weight: 700;
-          color: #222;
-          width: 250px;
-          height: 120px;
-          cursor: pointer;
-          transition: background 0.2s, color 0.2s;
-        }
-        .details-list-btn:hover {
-          background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%);
-          color: #fff;
-        }
-      `}</style>
+    <div className="mobile-root">
       <div className="reservation-details-outer">
         <div className="reservation-details-container">
           <img
@@ -223,11 +85,11 @@ const ReservationDetails = () => {
             <div className="details-list-btn-row">
               <button className="details-list-btn" onClick={() => navigate(-1)}>목록</button>
             </div>
-            <FooterLayout active="user" />
           </div>
         </div>
       </div>
-    </MobileLayout>
+      <FooterLayout active="user" />
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ const FooterLayout = ({ active = "user" }) => {
     <>
       <style>{`
         .mypage-footer {
-            position: absolute;
+            position: fixed;
             left: 0;
             bottom: 0; 
             width: 100%;
