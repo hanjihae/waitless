@@ -17,7 +17,7 @@ const MyPage = () => {
           <span className="dot" />
         </div>
       </header>
-      <div className="mypage-center-box">
+      <div className="center-box">
         <section className="mypage-profile">
           <div className="profile-avatar">
             <span className="avatar-initial">H</span>
