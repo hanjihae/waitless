@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import FooterLayout from "../../components/FooterLayout";
-import "../../styles/ReservationDetails.css";
+import "../../styles/mypage/ReservationDetails.css";
 
 const ReservationDetails = () => {
   const navigate = useNavigate();

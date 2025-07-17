@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FooterLayout from "../../components/FooterLayout";
-import "../../styles/MyPageHeader.css";
-import "../../styles/EditMyInfo.css";
+import "../../styles/mypage/MyPageHeader.css";
+import "../../styles/mypage/EditMyInfo.css";
 
 const EditMyInfo = () => {
   const navigate = useNavigate();
