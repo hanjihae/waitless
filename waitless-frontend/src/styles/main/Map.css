@@ -1,0 +1,411 @@
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.profile-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  position: relative;
+}
+.first-name {
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+.map-search-bar {
+  display: flex;
+  align-items: center;
+  width: 75.2vw;
+  height: 3.5rem;
+  background: #f5f5f5;
+  border-radius: 100px;
+  padding: 0 8px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 3vw;
+  gap: 20px;
+}
+.icon.header-bookmark {
+  background-image: url("/img/icon/bookmark-icon-black.png");
+  width: 24px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.alarm-icon {
+  position: relative;
+  font-size: 1rem;
+  color: #222;
+  width: 50px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alarm-icon .bell {
+  width: 35px;
+  height: 50px;
+  display: inline-block;
+  background-image: url("/img/icon/bell-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+.alarm-icon .dot {
+  position: absolute;
+  top: 3vh;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  background: #6253d3;
+  border-radius: 50%;
+}
+.map-container {
+  width: 100%;
+  min-width: 100vw;
+  margin-top: 5vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.location-row {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 16px 10px 16px;
+}
+.location-row .icon {
+  margin-right: 6px;
+}
+.map-area {
+  background: #f7f7fa;
+  border-radius: 16px;
+  height: 44vh;
+  margin-bottom: 10px;
+  position: relative;
+}
+.fake-map {
+  background: #e0e0e0;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.map-marker {
+  background: #a084f7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+.search-area-btn {
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+  font-weight: 500;
+  left: 50%;
+  padding: 10px 24px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.restaurant-card {
+  align-items: flex-start;
+  background: #fff;
+  display: flex;
+  padding: 20px 15px 0 15px;
+  position: relative;
+  width: 100vw;
+}
+.restaurant-img {
+  border-radius: 12px;
+  width: 100px;
+  height: 120px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+.restaurant-info {
+  flex: 1;
+}
+.restaurant-title-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.restaurant-desc {
+  font-size: 1rem;
+  margin-top: 8px;
+  display: inline-block;
+  max-width: 50vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.restaurant-rating {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.restaurant-rating .star {
+  color: #f7b801;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.restaurant-rating .score {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.restaurant-rating .count {
+  color: #757575;
+  font-weight: 300;
+}
+.restaurant-category {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+}
+.map-icon.bookmark-gray {
+  width: 32px;
+  height: 32px;
+  margin-top: -10px;
+}
+
+.reserve-btn {
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 16px;
+  padding: 10px 24px;
+  width: 100%;
+  max-width: 40vw;
+  min-width: 100px;
+  height: 4.3rem;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.map-footer {
+  align-items: center;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  right: 0;
+}
+.map-footer .icon {
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+.location-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5vw 20px 6vw;
+  background: #fff;
+}
+.location-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.map-icon.location {
+  width: 24px;
+  height: 24px;
+  background-image: url("/img/icon/pin-icon-gray.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.location-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #222;
+}
+.map-icon.arrow {
+  width: 10px;
+  height: 10px;
+  background-image: url("/img/icon/next-arrow-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.coupon {
+  width: 30px;
+  height: 30px;
+  background-image: url("/img/icon/coupon-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.map-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 14vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+.map-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-icon.back {
+  width: 22px;
+  height: 22px;
+}
+.map-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .map-area {
+    height: 43vh;
+  }
+  .map-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    padding: 0 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .profile-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .first-name {
+    display: inline-block;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+  .map-search-bar {
+    display: flex;
+    align-items: center;
+    width: 68vw;
+    height: 3.5rem;
+    background: #f5f5f5;
+    border-radius: 100px;
+    padding: 0 8px;
+    flex-shrink: 0;
+    margin-left: 3vw;
+  }
+  .header-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    gap: 18px;
+  }
+  .icon.header-bookmark {
+    background-image: url("/img/icon/bookmark-icon-black.png");
+    width: 24px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+  }
+  .alarm-icon {
+    position: relative;
+    font-size: 1rem;
+    color: #222;
+    width: 50px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .alarm-icon .bell {
+    width: 35px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("/img/icon/bell-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+  }
+  .alarm-icon .dot {
+    position: absolute;
+    top: 3vh;
+    right: 10px;
+    width: 5px;
+    height: 5px;
+    background: #6253d3;
+    border-radius: 50%;
+  }
+}
