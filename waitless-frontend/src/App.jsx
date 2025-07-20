@@ -10,6 +10,7 @@ import WaitingList from './pages/mypage/WaitingList';
 import FavoriteList from './pages/mypage/FavoriteList';
 import Map from './pages/main/Map';
 import Search from './pages/main/Search';
+import Coupon from './pages/main/Coupon';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/mypage/favorite-list" element= {<FavoriteList />} />
         <Route path="/main/" element= {<Map />} />
         <Route path="/main/search" element= {<Search />} />
+        <Route path="/main/coupon" element= {<Coupon />} />
       </Routes>
     </BrowserRouter>
   );

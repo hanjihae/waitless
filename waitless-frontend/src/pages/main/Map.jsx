@@ -35,49 +35,53 @@ const Map = () => {
             </div>
             <span className="coupon"></span>
           </div>
-            {/* 지도 영역 */}
-            <div className="map-area">
-              {/* 실제 지도 대신 배경 + 마커 */}
-              <div className="fake-map">
-                {[...Array(7)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="map-marker"
-                    style={{ left: 30 + i * 30, top: 40 + (i % 3) * 30 }}
-                  />
-                ))}
-              </div>
-              <button className="search-area-btn">이 지역 검색하기</button>
-              <span className="map-icon gps" />
+          {/* 지도 영역 */}
+          <div className="map-area">
+            {/* 실제 지도 대신 배경 + 마커 */}
+            <div className="fake-map">
+              {[...Array(7)].map((_, i) => (
+                <div
+                  key={i}
+                  className="map-marker"
+                  style={{ left: 100 + i * 40, top: 60 + (i % 3) * 30 }}
+                />
+              ))}
             </div>
-
-            {/* 음식점 카드 */}
-            <div className="restaurant-card">
-              <img
-                className="restaurant-img"
-                src="/public/img/sample/restaurant1.png"
-                alt="마리스그릴"
-              />
-              <div className="restaurant-info">
-                <div className="restaurant-title-row">
-                  <span className="restaurant-title">마리스그릴</span>
-                  <span className="map-icon bookmark" />
-                </div>
-                <div className="restaurant-desc">
-                  망원동 시장 근처 맛있고 분위기 좋은..
-                </div>
-                <div className="restaurant-rating">
-                  <span className="star">★</span>
-                  <span className="score">4.3</span>
-                  <span className="count">(1,028)</span>
-                </div>
-                <div className="restaurant-category">이탈리아 음식</div>
+            <div className="map-area-actions">
+              <button className="search-area-btn">이 지역 검색하기</button>
+              <div className="gps-fab">
+                <span className="map-icon gps" />
               </div>
-              <span className="map-icon bookmark-gray">
-                <img src="/img/icon/bookmark-icon-gray.png" alt="북마크" />
-              </span>
             </div>
           </div>
+
+          {/* 음식점 카드 */}
+          <div className="restaurant-card">
+            <img
+              className="restaurant-img"
+              src="/public/img/sample/restaurant1.png"
+              alt="마리스그릴"
+            />
+            <div className="restaurant-info">
+              <div className="restaurant-title-row">
+                <span className="restaurant-title">마리스그릴</span>
+                <span className="map-icon bookmark" />
+              </div>
+              <div className="restaurant-desc">
+                망원동 시장 근처 맛있고 분위기 좋은..
+              </div>
+              <div className="restaurant-rating">
+                <span className="star">★</span>
+                <span className="score">4.3</span>
+                <span className="count">(1,028)</span>
+              </div>
+              <div className="restaurant-category">이탈리아 음식</div>
+            </div>
+            <span className="map-icon bookmark-gray">
+              <img src="/img/icon/bookmark-icon-gray.png" alt="북마크" />
+            </span>
+          </div>
+        </div>
 
         {/* 하단 메뉴 */}
         <footer className="map-footer">
