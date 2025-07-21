@@ -1,0 +1,107 @@
+.coupon-container {
+  width: 100vw;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 3rem 0 2rem;
+  background: #fff;
+  font-weight: 700;
+  width: 100%;
+  height: 13vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 16.67px;
+  white-space: nowrap;
+}
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-left: auto;
+  position: relative;
+}
+.event-banner {
+  background: linear-gradient(180deg, #ad7ff5 0%, #6253d3 100%);
+  padding: calc(13vh + 50px) 0 0 0;
+  position: relative;
+  text-align: left;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.banner-logo {
+  position: absolute;
+  top: 6vh;
+  right: 30px;
+  width: 160px;
+  opacity: 0.9;
+}
+.banner-text {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 40px 0 0 30px;
+  text-align: left;
+}
+.event-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 0;
+  background: #fff;
+}
+.event-date {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+.event-clock {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #111;
+}
+.coupon-btn {
+  width: 90%;
+  max-width: 420px;
+  height: 3.5rem;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+}
+.ad-footer {
+  width: 100%;
+  background: #e5e5e5;
+  color: #bbb;
+  text-align: center;
+  font-size: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+}
