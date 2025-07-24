@@ -84,14 +84,15 @@ const RestaurantDetails = () => {
         ) : (
           <div className="waiting-form">
             <div className="form-label">
-              대기인원 <span className="waiting-count">25팀</span>
+              <span className="waiting-title">대기인원</span>
+              <span className="waiting-count">25팀</span>
             </div>
+            <div className="form-label select-count">인원 선택</div>
             <div className="form-row">
-              <div className="form-label">인원 선택</div>
-              <div className="form-select">
-                <span className="icon user"></span>
+              <div className="form-select waiting">
+                <span className="icon-btn user"></span>
                 2명
-                <span className="icon arrow"></span>
+                <span className="icon-btn arrow"></span>
               </div>
             </div>
           </div>

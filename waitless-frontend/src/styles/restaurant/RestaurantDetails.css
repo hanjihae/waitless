@@ -136,20 +136,13 @@
   color: #6253d3;
   border-bottom: 2.5px solid #6253d3;
 }
-
 .tab-content {
   padding: 20px 3vw 0 3vw;
 }
-
 .form-label {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 10px;
-}
-.waiting-count {
-  color: #6253d3;
-  font-weight: 700;
-  margin-left: 4px;
+  margin-bottom: 12px;
 }
 .form-row {
   display: flex;
@@ -219,6 +212,23 @@
   height: 20px;
   background-image: url("/img/icon/bell-icon-purple.png");
 }
+.waiting-title {
+  font-size: 1rem;
+}
+.waiting-count {
+  color: #6253d3;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.form-select.waiting {
+  height: 3.8rem;
+}
+.form-label.select-count {
+  margin-top: 15px; 
+}
+.icon-btn.user {
+  background-image: url("/img/icon/name-icon.png");
+}
 .restaurant-footer {
   align-items: center;
   background: #fff;
@@ -264,6 +274,7 @@
   font-size: 1.2rem;
   font-weight: 800;
 }
+/* 예약 상세 모달 */
 .date-modal-backdrop {
   position: fixed;
   left: 0; top: 0; right: 0; bottom: 0;
