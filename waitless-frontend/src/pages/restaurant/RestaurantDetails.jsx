@@ -3,6 +3,7 @@ import "../../styles/restaurant/RestaurantDetails.css";
 
 const RestaurantDetails = () => {
   const [tab, setTab] = useState("예약");
+  const [showDateModal, setShowDateModal] = useState(false);
 
   return (
     <div className="restaurant-details-root">
@@ -60,9 +61,12 @@ const RestaurantDetails = () => {
           <div className="reservation-form">
             <div className="form-label">예약 일시</div>
             <div className="form-row">
-              <div className="form-select">
+              <div
+                className="form-select"
+                onClick={() => setShowDateModal(true)}
+              >
                 <span className="icon-btn calendar"></span>
-                <span>내일 (월) / 2명</span>
+                <span className="form-select-label">내일 (월) / 2명</span>
                 <span className="icon-btn arrow"></span>
               </div>
             </div>
@@ -94,11 +98,50 @@ const RestaurantDetails = () => {
         )}
       </div>
 
-      <footer className="restaurant-footer">
-        <div className="restaurant-icon bookmark">
-          <img src="/img/icon/bookmark-icon-purple.png" alt="북마크" />
-          <span>3,345</span>
+      {showDateModal && (
+        <div className="date-modal-backdrop" onClick={() => setShowDateModal(false)}>
+          <div className="date-modal" onClick={e => e.stopPropagation()}>
+            {/* 인원 선택 */}
+            <div className="modal-section">
+              <label>인원 선택</label>
+              <select>
+                <option>1명</option>
+                <option>2명</option>
+                <option>3명</option>
+                {/* ... */}
+              </select>
+            </div>
+            {/* 날짜(캘린더) 선택 */}
+            <div className="modal-section">
+              <label>날짜 선택</label>
+              {/* 캘린더 라이브러리 또는 직접 구현 */}
+              <div className="calendar">
+                {/* 예시: 가능한 요일만 활성화 */}
+                <button className="day enabled">일</button>
+                <button className="day enabled">월</button>
+                <button className="day disabled" disabled>화</button>
+                <button className="day enabled">수</button>
+                <button className="day enabled">목</button>
+                <button className="day disabled" disabled>금</button>
+                <button className="day enabled">토</button>
+              </div>
+            </div>
+            {/* 시간대 선택 */}
+            <div className="modal-section">
+              <label>시간 선택</label>
+              <div className="time-list">
+                <button className="time enabled">17:00</button>
+                <button className="time enabled">18:00</button>
+                <button className="time disabled" disabled>19:00</button>
+                {/* ... */}
+              </div>
+            </div>
+            <button className="modal-close" onClick={() => setShowDateModal(false)}>닫기</button>
+          </div>
         </div>
+      )}
+
+      <footer className="restaurant-footer">
         <button
           className={
             tab === "예약"
@@ -108,6 +151,10 @@ const RestaurantDetails = () => {
         >
           {tab === "예약" ? "예약하기" : "웨이팅 등록하기"}
         </button>
+        <div className="restaurant-icon bookmark">
+          <img src="/img/icon/bookmark-icon-purple.png" alt="북마크" />
+          <span>3,345</span>
+        </div>
       </footer>
     </div>
   );
