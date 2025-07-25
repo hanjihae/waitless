@@ -1,0 +1,124 @@
+.review-root {
+  width: 96vw;
+  margin-top: 13vh;
+}
+.review-summary {
+  display: flex;
+  gap: 18px;
+  padding: 24px 16px 18px 16px;
+  background: #fafafa;
+  border-radius: 12px;
+  margin: 18px 16px 18px 16px;
+}
+.summary-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+  margin-right: 8px;
+}
+.summary-score {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 2px;
+}
+.summary-stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+.summary-count {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+.summary-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.stat-star {
+  font-size: 1rem;
+  color: #888;
+  width: 16px;
+  text-align: right;
+}
+.stat-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  margin: 0 6px;
+  overflow: hidden;
+}
+.stat-bar {
+  height: 100%;
+  background: #7c5dfa;
+  border-radius: 4px;
+}
+.stat-percent {
+  font-size: 0.95rem;
+  color: #888;
+  width: 32px;
+  text-align: right;
+}
+
+.review-list {
+  padding: 0 16px 24px 16px;
+}
+.review-item {
+  padding: 18px 0 16px 0;
+  border-bottom: 1px solid #eee;
+}
+.review-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.review-user {
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+.review-star {
+  color: #ffc107;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.actual-score {
+    color: #888;
+}
+.review-date {
+  margin-left: auto;
+  color: #bbb;
+  font-size: 0.98rem;
+}
+.review-text {
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 8px;
+  white-space: pre-line;
+}
+.review-images {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.review-images img {
+  width: 90px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 15px;
+  background: #eee;
+}

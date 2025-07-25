@@ -8,10 +8,12 @@ import ReservationList from './pages/mypage/ReservationList';
 import ReservationDetails from './pages/mypage/ReservationDetails';
 import WaitingList from './pages/mypage/WaitingList';
 import FavoriteList from './pages/mypage/FavoriteList';
+import MyReview from './pages/mypage/MyReview';
 import Map from './pages/main/Map';
 import Search from './pages/main/Search';
 import Coupon from './pages/main/Coupon';
 import RestaurantDetails from './pages/restaurant/RestaurantDetails';
+import Review from './pages/restaurant/Review';
 
 function App() {
   return (
@@ -26,10 +28,12 @@ function App() {
         <Route path="/mypage/reservation-details" element= {<ReservationDetails />} />
         <Route path="/mypage/waiting-list" element={<WaitingList />} />
         <Route path="/mypage/favorite-list" element= {<FavoriteList />} />
+        <Route path="/mypage/review" element= {<MyReview />} />
         <Route path="/main/" element= {<Map />} />
         <Route path="/main/search" element= {<Search />} />
         <Route path="/main/coupon" element= {<Coupon />} />
-        <Route path="/restaurant/" element={<RestaurantDetails />}/>
+        <Route path="/restaurant/" element={<RestaurantDetails />} />
+        <Route path="/restaurant/review" element={<Review />} />
       </Routes>
     </BrowserRouter>
   );
