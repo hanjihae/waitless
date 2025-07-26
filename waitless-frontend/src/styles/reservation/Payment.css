@@ -1,0 +1,134 @@
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+.logo {
+  height: 32px;
+}
+
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  gap: 12px;
+}
+
+.restaurant-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.restaurant-details .category {
+  font-size: 14px;
+  color: gray;
+}
+
+.restaurant-details .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.restaurant-details .desc {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 24px 0 8px;
+  color: #333;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.total {
+  text-align: right;
+  font-size: 16px;
+  color: #6a4dff;
+  margin-top: 10px;
+}
+
+.discount-section .point-box,
+.coupon-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.point-box button {
+  background: linear-gradient(to right, #a179ff, #6a4dff);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.coupon-box select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.footer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-payment {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a4dff;
+}
+
+.pay-btn {
+  background: linear-gradient(to right, #a179ff, #6a4dff);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
