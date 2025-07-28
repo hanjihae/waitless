@@ -3,26 +3,26 @@ import "../../styles/reservation/Payment.css";
 
 const Payment = () => {
   return (
-    <div class="container">
-      <header class="header">
-        <button class="back-button">←</button>
-        <img src="/img/waitless-logo.png" alt="Waitless Logo" class="logo" />
+    <div class="mobile-root">
+      <header class="payment-header">
+        <button class="payment-back-btn"></button>
+        <img class="payment-logo" src="/img/waitless-logo.png" alt="Waitless Logo" />
       </header>
 
-      <section class="restaurant-info">
+      <section class="payment-restaurant-info">
         <img
           src="/img/sample/restaurant1.png"
           alt="식당 이미지"
-          class="restaurant-image"
+          class="payment-restaurant-image"
         />
-        <div class="restaurant-details">
+        <div class="payment-restaurant-details">
           <div class="category">이탈리아 음식</div>
           <div class="name">마리스그릴</div>
           <div class="desc">망원동 시장 근처 맛있고 분위기 좋은 이탈..</div>
         </div>
       </section>
 
-      <section class="menu-section">
+      <section class="payment-menu-section">
         <div class="section-title">메뉴 선택</div>
         <ul class="menu-list">
           <li>

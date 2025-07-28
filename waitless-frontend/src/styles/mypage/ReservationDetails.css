@@ -22,8 +22,8 @@
 .reservation-logo {
   width: 12rem;
   display: block;
-  margin: 5vh auto;
-  padding-top: 10vh;
+  margin: 0 auto 5vh auto;
+  padding-top: 6vh;
 }
 .details-title-row {
   display: flex;
