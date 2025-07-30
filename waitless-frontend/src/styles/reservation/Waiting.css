@@ -1,0 +1,111 @@
+.waiting-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.refresh {
+  width: 32px;
+  height: 32px;
+  background: url("/img/icon/refresh-icon.png") no-repeat center;
+  background-size: contain;
+  border: none;
+  position: relative;
+  left: 0;
+}
+
+.order-label {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 30px;
+  color: #333;
+}
+
+.order-circle {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
+  border-radius: 50%;
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+}
+
+.order-number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.order-unit {
+  font-size: 1rem;
+  position: relative;
+  top: 8px;
+}
+
+.waiting-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.highlight {
+  color: #6656d4;
+  font-weight: bold;
+}
+
+.timestamp {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin: 10px 0 0 0;
+}
+
+.waiting-detail-box {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.waiting-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+  font-size: 15px;
+}
+
+.divider-line {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+.waiting-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.8rem;
+}

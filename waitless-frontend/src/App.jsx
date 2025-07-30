@@ -15,6 +15,7 @@ import Coupon from './pages/main/Coupon';
 import RestaurantDetails from './pages/restaurant/RestaurantDetails';
 import Review from './pages/restaurant/Review';
 import Payment from './pages/reservation/Payment';
+import Waiting from './pages/reservation/Waiting';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/restaurant/" element={<RestaurantDetails />} />
         <Route path="/restaurant/review" element={<Review />} />
         <Route path="/reservation/payment" element={<Payment />} />
+        <Route path="/reservation/waiting" element={<Waiting />} />
       </Routes>
     </BrowserRouter>
   );
