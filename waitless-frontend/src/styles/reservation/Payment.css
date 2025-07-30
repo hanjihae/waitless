@@ -1,3 +1,12 @@
+.payment-root {
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 74vh;
+}
 .payment-header {
   display: flex;
   align-items: center;
@@ -9,6 +18,7 @@
   top: 0;
   background-color: #fff;
   z-index: 100;
+  border-bottom: 3px solid #f5f5f5;
 }
 .payment-back-btn {
   position: absolute;
@@ -31,155 +41,161 @@
 }
 .payment-logo {
   width: 40%;
-  max-width: 180px;
+  max-width: 100px;
 }
-
-
+.payment-middle-container {
+  width: 100%;
+  overflow: scroll;
+}
 .payment-restaurant-info {
   display: flex;
   align-items: center;
-  margin: 14vh 16px 8px;
+  padding: 20px 0 20px 25px;
   gap: 12px;
   width: 100%;
+  border-bottom: 5px solid #f5f5f5;
 }
-
 .payment-restaurant-image {
   width: 80px;
   height: 80px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .payment-restaurant-details {
   flex-grow: 1;
 }
-
 .payment-restaurant-details .category {
   font-size: 13px;
   color: gray;
 }
-
 .payment-restaurant-details .name {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
-
 .payment-restaurant-details .desc {
-  font-size: 13px;
+  font-size: 0.8rem;
   color: #555;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.section-title {
-  font-weight: bold;
-  font-size: 15px;
-  margin: 20px 16px 8px;
-  color: #333;
-  width: 100%;
+.payment-menu-section {
+  border-bottom: 5px solid #f5f5f5;
 }
-
+.section-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 20px 0 8px 25px;
+  color: #333;
+}
 .menu-section {
-  width: 100%;
   padding: 0 16px;
 }
-
 .menu-list {
   list-style: none;
-  padding: 0;
+  padding: 0 25px;
   margin: 0;
 }
-
 .menu-list li {
   display: flex;
   justify-content: space-between;
-  margin: 4px 0;
+  margin: 6px 0;
   font-size: 14px;
 }
-
-.total {
+.payment-total-amount {
   text-align: right;
-  font-size: 15px;
-  color: #6a4dff;
-  margin-top: 10px;
+  font-size: 1.1rem !important;
+  color: #6253d3;
+  padding: 10px 0;
   font-weight: bold;
 }
-
 .discount-section {
-  width: 100%;
-  padding: 0 16px;
-  margin-top: 20px;
+  padding: 0 0 10px 0;
 }
-
 .discount-section .point-box,
 .coupon-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f4f4f4;
-  padding: 10px;
+  border: 1px solid #B3B3B3;
+  padding: 15px;
   border-radius: 8px;
-  margin-top: 12px;
+  margin: 12px 25px;
+  height: 3rem;
 }
-
-.point-box span:first-child {
+.discount-section .point-box {
+  padding-right: 0;
+}
+.point-box span{
   font-size: 14px;
-  color: #444;
+  color: #B3B3B3;
 }
-
-.point-box span:last-child {
-  font-size: 14px;
-  font-weight: bold;
+.point-box-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-
+.point-box-left span {
+  font-weight: 700;
+  color: #757575;
+}
 .point-box button {
-  background: linear-gradient(to right, #a179ff, #6a4dff);
+  background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%);
   color: white;
   padding: 6px 12px;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
+  width: 110px;
+  height: 3rem;
 }
-
+.coupon-box .gift {
+  background-image: url("/img/icon/gift-icon.png");
+  width: 18px;
+  height: 18px;
+}
 .coupon-box select {
   border: none;
   background: transparent;
   font-size: 14px;
-  color: #555;
+  color: #222;
   flex-grow: 1;
   margin-left: 10px;
 }
 
-.footer {
+.payment-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background: white;
   padding: 16px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  border-top: 5px solid #f5f5f5;
 }
 
 .total-payment {
-  font-size: 17px;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #6a4dff;
+  color: #6656D4;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .pay-btn {
-  background: linear-gradient(to right, #a179ff, #6a4dff);
+  background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%);
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 999px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
+  width: 33vw;
 }

@@ -1,7 +1,12 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #fff;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .mobile-root {
   min-height: 100vh;

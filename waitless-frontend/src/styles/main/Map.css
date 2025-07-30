@@ -105,10 +105,11 @@
 .map-container {
   width: 100%;
   min-width: 100vw;
-  margin-top: 5vh;
-  height: 80vh;
+  margin: 13vh 0;
+  height: 74vh;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 .location-bar {
   display: flex;
@@ -229,7 +230,7 @@
   align-items: flex-start;
   background: #fff;
   display: flex;
-  padding: 20px 3vw 0 3vw;
+  padding: 20px 3vw;
   position: relative;
   width: 100vw;
 }
