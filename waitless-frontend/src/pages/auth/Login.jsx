@@ -1,14 +1,43 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import '../../styles/auth/Login.css';
+import "../../styles/auth/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert("로그인 시도: " + email);
+
+    try {
+      const response = await fetch("http://localhost:19098/api/auth/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: pw,
+        }),
+        credentials: "include", // 필요 시 쿠키 포함
+      });
+
+      if (!response.ok) {
+        throw new Error("로그인 실패");
+      }
+
+      const data = await response.json(); // access token 등
+      console.log("로그인 성공", data);
+
+      // 토큰 저장 (예시)
+      localStorage.setItem("accessToken", data.token);
+
+      // 리디렉션
+      window.location.href = "/main/"; // 로그인 후 이동할 경로
+    } catch (error) {
+      console.error("로그인 오류:", error);
+      alert("이메일 또는 비밀번호가 잘못되었습니다.");
+    }
   };
 
   return (

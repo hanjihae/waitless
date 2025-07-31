@@ -63,6 +63,9 @@
 .payment-restaurant-details {
   flex-grow: 1;
 }
+.payment-restaurant-details div {
+  padding: 3px 0 0 0;
+}
 .payment-restaurant-details .category {
   font-size: 13px;
   color: gray;
@@ -116,7 +119,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #B3B3B3;
+  border: 1px solid #b3b3b3;
   padding: 15px;
   border-radius: 8px;
   margin: 12px 25px;
@@ -125,9 +128,9 @@
 .discount-section .point-box {
   padding-right: 0;
 }
-.point-box span{
+.point-box span {
   font-size: 14px;
-  color: #B3B3B3;
+  color: #b3b3b3;
 }
 .point-box-left {
   display: flex;
@@ -139,7 +142,7 @@
   color: #757575;
 }
 .point-box button {
-  background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%);
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
   color: white;
   padding: 6px 12px;
   border: none;
@@ -170,7 +173,7 @@
   left: 0;
   width: 100%;
   background: white;
-  padding: 16px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -179,23 +182,25 @@
   height: 13vh;
 }
 
+
 .total-payment {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #6656D4;
+  color: #6656d4;
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
 .pay-btn {
-  background: linear-gradient(90deg, #AD7FF5 0%, #6253D3 100%);
+  background: linear-gradient(90deg, #ad7ff5 0%, #6253d3 100%);
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 33vw;
+  width: 35vw;
+  height: 4rem;
 }
