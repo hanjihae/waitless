@@ -7,16 +7,51 @@ const SignUp = () => {
   const [pw, setPw] = useState("");
   const [pwCheck, setPwCheck] = useState("");
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [certCode, setCertCode] = useState("");
   const navigate = useNavigate();
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
+
     if (pw !== pwCheck) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
-    alert(`회원가입 시도: ${email}, ${name}`);
-    // 실제 회원가입 로직 추가
+
+    if (!phone || !certCode) {
+      alert("전화번호와 인증번호를 입력해주세요.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:19091/api/users/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: pw,
+          name: name,
+          phone: phone,
+          role: "USER", // 고정
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("회원가입 실패");
+      }
+
+      const data = await response.json();
+      console.log("회원가입 성공:", data);
+
+      alert("회원가입이 완료되었습니다.");
+      navigate("/"); // 회원가입 완료 후 로그인 페이지로 이동
+    } catch (error) {
+      console.error("회원가입 오류:", error);
+      alert("회원가입 중 오류가 발생했습니다.");
+    }
   };
 
   return (
@@ -70,13 +105,23 @@ const SignUp = () => {
             />
           </div>
           <div className="input-group">
-            <span className="icon phone"></span>
+            <span className="icon w"></span>
             <input
               type="password"
-              placeholder="전화번호"
+              placeholder="비밀번호 확인"
               value={pwCheck}
               onChange={(e) => setPwCheck(e.target.value)}
               autoComplete="new-password"
+              required
+            />
+          </div>
+          <div className="input-group">
+            <span className="icon phone"></span>
+            <input
+              type="tel"
+              placeholder="전화번호"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               required
             />
             <button type="button" className="input-right-btn">
@@ -86,11 +131,10 @@ const SignUp = () => {
           <div className="input-group">
             <span className="icon certification"></span>
             <input
-              type="password"
+              type="text"
               placeholder="인증번호 입력"
-              value={pwCheck}
-              onChange={(e) => setPwCheck(e.target.value)}
-              autoComplete="new-password"
+              value={certCode}
+              onChange={(e) => setCertCode(e.target.value)}
               required
             />
             <button type="button" className="input-right-btn">

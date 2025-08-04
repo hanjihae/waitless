@@ -47,7 +47,7 @@ public class User  extends BaseTimeEntity {
 	@Column(nullable = false)
 	private Role role;
 
-	@Column(nullable = false, unique = true)
+	@Column(unique = true)
 	private String slackId;
 
 	public User(String email, String password, String name, String phone, Role role, String slackId) {

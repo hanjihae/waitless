@@ -10,7 +10,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:19098/api/auth/signin", {
+      const response = await fetch("http://localhost:19091/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,8 +32,8 @@ const Login = () => {
       // 토큰 저장 (예시)
       localStorage.setItem("accessToken", data.token);
 
-      // // 리디렉션
-      // window.location.href = "/main/"; // 로그인 후 이동할 경로
+      // 리디렉션
+      window.location.href = "/main/"; // 로그인 후 이동할 경로
     } catch (error) {
       console.error("로그인 오류:", error);
       alert("이메일 또는 비밀번호가 잘못되었습니다.");
